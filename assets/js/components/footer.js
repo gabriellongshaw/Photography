@@ -6,13 +6,21 @@ export function createFooter() {
 
   if (!placeholder) return;
 
-  const navItems = pages.map(page => {
-    const isHome = page.href === '/';
-    const isActive = isHome
-      ? (currentPath === '/' || currentPath === '/index.html')
-      : currentPath.startsWith(page.href);
+  const pathParts = currentPath.split('/');
+  const isProject = pathParts[1] === 'projects' && pathParts[2];
+  const projectBase = isProject ? `/projects/${pathParts[2]}/` : '/';
 
-    return `<li><a href="${page.href}" ${isActive ? 'class="active"' : ''}>${page.name}</a></li>`;
+  const navItems = pages.map(page => {
+    const absoluteHref = (page.href === './' || page.href === '/') 
+      ? projectBase 
+      : `${projectBase}${page.href}`;
+
+    const isHomeItem = page.name === 'Home';
+    const isActive = isHomeItem
+      ? (currentPath === projectBase || currentPath === projectBase + 'index.html')
+      : currentPath.startsWith(absoluteHref);
+
+    return `<li><a href="${absoluteHref}" ${isActive ? 'class="active"' : ''}>${page.name}</a></li>`;
   }).join('');
 
   const currentYear = new Date().getFullYear();
