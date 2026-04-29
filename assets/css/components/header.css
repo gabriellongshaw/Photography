@@ -105,7 +105,7 @@ html.scroll-lock .header {
   transition: 0.25s ease-in-out;
 }
 
-.hamburger .bar:nth-child(1) { 
+.hamburger .bar:nth-child(1) {
   top: 0;
 }
 
@@ -117,8 +117,8 @@ html.scroll-lock .header {
   top: 10px;
 }
 
-.menu-toggle.active .bar:nth-child(1) { 
-  top: 5px; 
+.menu-toggle.active .bar:nth-child(1) {
+  top: 5px;
   transform: rotate(135deg);
 }
 
@@ -127,16 +127,15 @@ html.scroll-lock .header {
   left: -20px;
 }
 
-.menu-toggle.active .bar:nth-child(3) { 
-  top: 5px; 
+.menu-toggle.active .bar:nth-child(3) {
+  top: 5px;
   transform: rotate(-135deg);
 }
 
 .header-nav {
   display: none;
-  align-items: flex-end;
-  position: absolute;
-  left: 50%;
+  align-items: center;
+  margin-left: auto;
 }
 
 .header-nav ul {
