@@ -39,18 +39,15 @@ export function createFooter() {
           <h3>Topics</h3>
           <ul>${navItems}</ul>
         </div>
-        <div class="footer-section">
-          <h3>Gabriel Longshaw</h3>
-          <ul>
-            <li><a href="https://www.gabriellongshaw.co.uk/" target="_blank" rel="noopener">Portfolio</a></li>
-            <li><a href="https://github.com/gabriellongshaw" target="_blank" rel="noopener">GitHub</a></li>
-          </ul>
-        </div>
       </div>
     </div>
     <div class="footer-bottom">
       <p><span class="copyright">&copy;</span> ${currentYear} Gabriel Longshaw. All rights reserved.</p>
       <p class="meta">"The heavens declare the glory of God; and the firmament shows His handiwork." — Psalm 19:1</p>
+      <p>
+        Website designed and developed by
+        <a class="name" href="https://www.gabriellongshaw.co.uk/" target="_blank" rel="noopener">Gabriel Longshaw</a>.
+      </p>
     </div>
   `;
 

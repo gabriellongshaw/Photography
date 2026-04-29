@@ -29,6 +29,9 @@
   .header-nav {
     display: flex;
   }
+  .menu-toggle {
+    display: none;
+  }
   .sim-layout {
     grid-template-columns: 1fr 300px;
   }
@@ -43,14 +46,5 @@
 @media (min-width: 1024px) {
   .sim-layout {
     grid-template-columns: 1fr 360px;
-  }
-}
-
-@media (max-width: 767px) {
-  .sim-layout {
-    grid-template-columns: 1fr;
-  }
-  .page-hero-title {
-    font-size: 2rem;
   }
 }
