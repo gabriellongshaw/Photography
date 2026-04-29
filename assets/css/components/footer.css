@@ -1,0 +1,135 @@
+#footer-placeholder {
+  height: 0;
+}
+
+.footer {
+  background: var(--footer-bg);
+  color: var(--text);
+  padding: 2rem 1.25rem 1.5rem;
+  margin-top: auto;
+  border-top: 1px solid var(--border);
+  font-size: 0.9rem;
+}
+
+.footer-content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.footer-top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.35rem;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer-logo-icon {
+  width: 24px;
+  height: 24px;
+  background: var(--accent-subtle);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.footer-logo-icon svg {
+  width: 13px;
+  height: 13px;
+  color: var(--accent);
+  stroke: currentColor;
+}
+
+.footer-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.footer-description {
+  font-size: 0.8rem;
+  opacity: 0.55;
+  line-height: 1.6;
+  max-width: 360px;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem 2rem;
+  margin: 0 0 0.5rem;
+}
+
+.footer-section { 
+  flex: 1 1 100%; 
+  
+}
+
+.footer-section h3 {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.6rem;
+  opacity: 0.7;
+}
+
+.footer-section ul {
+  list-style: none; 
+  padding: 0;
+  margin: 0;
+}
+
+.footer a {
+  color: var(--text);
+  text-decoration: none;
+  opacity: 0.6;
+  transition: opacity 0.15s, color 0.15s;
+  font-size: 0.82rem;
+  line-height: 2;
+  display: inline-block;
+}
+
+.footer a:hover { 
+  opacity: 1; 
+  color: var(--accent);
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--border);
+  padding-top: 1rem;
+  font-size: 0.75rem;
+  opacity: 0.45;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.5rem;
+}
+
+.footer-bottom p { 
+  margin: 0;
+}
+
+.footer .meta {
+  font-style: italic;
+  font-size: 0.75rem;
+}
+
+.footer-bottom .name {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.copyright { 
+  display: inline;
+}

@@ -1,0 +1,66 @@
+:root {
+  --bg: #ffffff;
+  --header-bg: rgba(255, 255, 255, 0.85);
+  --header-bg-solid: #ffffff;
+  --menu-bg: rgba(255, 255, 255, 0.96);
+  --footer-bg: #f4f6f9;
+  --card-bg: #f0f4f8;
+  --card-bg-hover: #e4ecf4;
+  --button-bg: #1a6fd4;
+  --button-bg-hover: #155bb5;
+  --button-text: #ffffff;
+  --button-secondary-bg: #e8f0fb;
+  --button-secondary-bg-hover: #d8e6f8;
+  --button-secondary-text: #1a6fd4;
+  --nav-a: #4a5568;
+  --nav-a-bg: rgba(26, 111, 212, 0.08);
+  --text: #1a202c;
+  --link: #1a6fd4;
+  --border: #dce5f0;
+  --accent: #1a6fd4;
+  --accent-mid: #4a90d9;
+  --accent-subtle: rgba(26, 111, 212, 0.1);
+  --accent-subtle-hover: rgba(26, 111, 212, 0.16);
+  --meta-text: rgba(26, 32, 44, 0.55);
+  --modal-bg: #ffffff;
+  --modal-text: #1a202c;
+  --overlay-bg: rgba(255, 255, 255, 0.94);
+  --z-index-header: 900;
+  --z-index-lightbox: 1000;
+  --shape-large: 16px;
+  --shape-small: 8px;
+  --shape-ease: cubic-bezier(0.2, 0, 0, 1);
+  --shape-duration: 0.3s;
+  --progress: 50%;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f1117;
+    --header-bg: rgba(15, 17, 23, 0.88);
+    --header-bg-solid: #0f1117;
+    --menu-bg: rgba(15, 17, 23, 0.97);
+    --footer-bg: #13161e;
+    --card-bg: #181c27;
+    --card-bg-hover: #1e2333;
+    --button-bg: #3b82f6;
+    --button-bg-hover: #2563eb;
+    --button-text: #ffffff;
+    --button-secondary-bg: #1a2240;
+    --button-secondary-bg-hover: #1e2850;
+    --button-secondary-text: #60a5fa;
+    --nav-a: #8899bb;
+    --nav-a-bg: rgba(59, 130, 246, 0.1);
+    --text: #e2e8f4;
+    --link: #60a5fa;
+    --border: #1e2840;
+    --accent: #3b82f6;
+    --accent-mid: #60a5fa;
+    --accent-subtle: rgba(59, 130, 246, 0.12);
+    --accent-subtle-hover: rgba(59, 130, 246, 0.2);
+    --meta-text: rgba(226, 232, 244, 0.45);
+    --modal-bg: #181c27;
+    --modal-text: #e2e8f4;
+    --overlay-bg: rgba(15, 17, 23, 0.96);
+  }
+}

@@ -1,0 +1,56 @@
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.6rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-align: center;
+  background: var(--button-bg);
+  color: var(--button-text);
+  transition: background 0.15s ease, box-shadow 0.15s ease;
+  white-space: nowrap;
+  font-size: 0.9rem;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  font-family: inherit;
+}
+
+.button:hover {
+  background: var(--button-bg-hover);
+  box-shadow: 0 0 0 3px var(--accent-subtle);
+}
+
+.secondary-button {
+  background: var(--button-secondary-bg);
+  color: var(--button-secondary-text);
+}
+
+.secondary-button:hover {
+  background: var(--button-secondary-bg-hover);
+}
+
+.tertiary-button {
+  background: none;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.tertiary-button:hover {
+  background: var(--card-bg);
+  border-color: var(--accent-mid);
+}
+
+.button-container .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: max-content;
+}
+
+.button-disabled {
+  pointer-events: none;
+  opacity: 0.45;
+}

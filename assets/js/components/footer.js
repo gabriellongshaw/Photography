@@ -1,0 +1,58 @@
+import { pages } from '../data/pages.js';
+
+export function createFooter() {
+  const placeholder = document.getElementById('footer-placeholder');
+  const currentPath = window.location.pathname;
+
+  if (!placeholder) return;
+
+  const navItems = pages.map(page => {
+    const isHome = page.href === '/';
+    const isActive = isHome
+      ? (currentPath === '/' || currentPath === '/index.html')
+      : currentPath.startsWith(page.href);
+
+    return `<li><a href="${page.href}" ${isActive ? 'class="active"' : ''}>${page.name}</a></li>`;
+  }).join('');
+
+  const currentYear = new Date().getFullYear();
+  const footerElement = document.createElement('footer');
+  footerElement.className = 'footer';
+
+  footerElement.innerHTML = `
+    <div class="footer-content-wrapper">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="footer-logo-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M3 9a2 2 0 0 1 2-2h.5L7 5h10l1.5 2H21a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9z"></path>
+            </svg>
+          </span>
+          <span class="footer-title">Photography</span>
+        </div>
+        <p class="footer-description">A practical guide to understanding light, exposure, and creative control in photography.</p>
+      </div>
+
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Topics</h3>
+          <ul>${navItems}</ul>
+        </div>
+        <div class="footer-section">
+          <h3>Gabriel Longshaw</h3>
+          <ul>
+            <li><a href="https://www.gabriellongshaw.co.uk/" target="_blank" rel="noopener">Portfolio</a></li>
+            <li><a href="https://github.com/gabriellongshaw" target="_blank" rel="noopener">GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p><span class="copyright">&copy;</span> ${currentYear} Gabriel Longshaw. All rights reserved.</p>
+      <p class="meta">"The heavens declare the glory of God; and the firmament shows His handiwork." — Psalm 19:1</p>
+    </div>
+  `;
+
+  placeholder.replaceWith(footerElement);
+}

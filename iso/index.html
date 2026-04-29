@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ISO | Photography</title>
+  <meta name="description" content="Learn how ISO controls sensor sensitivity and noise. Interactive simulator and guide.">
+  <meta name="author" content="Gabriel Longshaw">
+  <link rel="stylesheet" href="../assets/css/variables.css">
+  <link rel="stylesheet" href="../assets/css/fonts.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/components/header.css">
+  <link rel="stylesheet" href="../assets/css/components/footer.css">
+  <link rel="stylesheet" href="../assets/css/components/buttons.css">
+  <link rel="stylesheet" href="../assets/css/components/menu.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+  <div id="header-placeholder"></div>
+  <main class="content">
+    <div class="page-hero">
+      <p class="page-hero-eyebrow">Chapter 3</p>
+      <h1 class="page-hero-title">ISO</h1>
+      <p class="page-hero-desc">ISO controls how sensitive your camera's sensor is to light. Raising ISO brightens the image, but at the cost of noise — grain and colour speckling that can ruin fine detail.</p>
+      <a href="../aperture/" class="button tertiary-button">Back to Aperture</a>
+    </div>
+    <div class="section-divider"></div>
+    <section class="main-section" aria-labelledby="facts-heading">
+      <h2 class="section-title" id="facts-heading">Key Concepts</h2>
+      <div class="quick-facts">
+        <div class="fact-card">
+          <span class="fact-card-title">Low ISO (100–400)</span>
+          <span class="fact-card-body">Clean, noise-free images. Use whenever you have enough light — outdoors in daylight, in a well-lit studio, or with a tripod.</span>
+        </div>
+        <div class="fact-card">
+          <span class="fact-card-title">Mid ISO (800–3200)</span>
+          <span class="fact-card-body">Slight noise but still very usable on modern cameras. Good for indoor events, overcast days, and concerts without flash.</span>
+        </div>
+        <div class="fact-card">
+          <span class="fact-card-title">High ISO (6400+)</span>
+          <span class="fact-card-body">Visible noise but sometimes necessary — night photography, dimly lit venues, handheld astrophotography. Noise reduction in post can help.</span>
+        </div>
+        <div class="fact-card">
+          <span class="fact-card-title">Native ISO</span>
+          <span class="fact-card-body">Every sensor has a "native" or "base" ISO — typically 100 or 200 — where it performs cleanest. Stay close to it when image quality is critical.</span>
+        </div>
+      </div>
+    </section>
+    <div class="section-divider"></div>
+    <section class="sim-section" aria-labelledby="sim-heading">
+      <h2 class="section-title" id="sim-heading">ISO Simulator</h2>
+      <p class="page-description">Drag the slider to change ISO. The image simulates brightness and noise grain.</p>
+      <div class="sim-layout">
+        <div class="sim-preview">
+          <img
+            id="iso-sim-image"
+            class="sim-preview-img"
+            src="https://picsum.photos/900/600?image=1038"
+            alt="Simulated ISO noise"
+          >
+          <p class="sim-caption">ISO: <strong id="iso-value">ISO 400</strong></p>
+        </div>
+        <div class="sim-controls">
+          <label for="iso-range">ISO sensitivity</label>
+          <p class="sim-value" id="iso-display">ISO 400</p>
+          <input id="iso-range" type="range" min="0" max="100" step="1" value="20">
+          <div class="scale-labels">
+            <span>100</span>
+            <span>400</span>
+            <span>1600</span>
+            <span>6400</span>
+            <span>25600</span>
+          </div>
+          <p class="sim-note">Keep ISO as low as possible for the cleanest results. Only raise it when you can't widen the aperture or slow the shutter any further.</p>
+        </div>
+      </div>
+    </section>
+    <div class="section-divider"></div>
+    <section class="main-section" aria-labelledby="gallery-heading">
+      <h2 class="section-title" id="gallery-heading">Low-Light Gallery</h2>
+      <p class="page-description">Scenes that challenge ISO control. Tap to enlarge.</p>
+      <div class="gallery-grid">
+        <figure class="gallery-item">
+          <img src="https://picsum.photos/600/400?image=1038" alt="Night city scene requiring high ISO">
+          <figcaption>Night city — ISO 3200</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="https://picsum.photos/600/400?image=1044" alt="Indoor event photography">
+          <figcaption>Indoor event — ISO 1600</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="https://picsum.photos/600/400?image=1039" alt="Astrophotography requiring very high ISO">
+          <figcaption>Star trail — ISO 6400</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="https://picsum.photos/600/400?image=1015" alt="Sunny outdoor scene low ISO">
+          <figcaption>Bright outdoors — ISO 100</figcaption>
+        </figure>
+      </div>
+    </section>
+    <div class="section-divider"></div>
+    <section class="main-section" aria-labelledby="learn-heading">
+      <h2 class="section-title" id="learn-heading">Practice &amp; Reference</h2>
+      <div class="learn-grid">
+        <div class="learn-card">
+          <h3>ISO quick reference</h3>
+          <ul>
+            <li><strong>ISO 100</strong> — bright sunlight, studio with flash</li>
+            <li><strong>ISO 400</strong> — overcast, open shade</li>
+            <li><strong>ISO 800–1600</strong> — indoors, golden hour</li>
+            <li><strong>ISO 3200+</strong> — night, candle-lit scenes</li>
+            <li><strong>ISO 12800+</strong> — very dark, accept noise</li>
+          </ul>
+        </div>
+        <div class="learn-card">
+          <h3>Practice exercises</h3>
+          <ol>
+            <li>In a dim room, shoot the same scene at ISO 400, 1600, and 6400. Examine noise at 100% zoom.</li>
+            <li>Find your camera's highest usable ISO — where noise becomes unacceptable to you.</li>
+            <li>Shoot in Auto ISO with a minimum shutter speed set to see how your camera balances the two.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+    <div class="section-divider"></div>
+    <div class="info-sections-grid">
+      <section class="info-section" aria-labelledby="triangle-heading">
+        <h2 class="info-section-title" id="triangle-heading">Putting It All Together</h2>
+        <p class="info-section-lead">Now that you understand aperture, shutter speed, and ISO individually, the real skill is balancing all three for any given scene.</p>
+        <p class="second">In bright light, use a low ISO, small aperture, and fast shutter. In dim light, open the aperture, slow the shutter, and raise the ISO — in that order — until you get the exposure you need.</p>
+        <ul class="highlight-list">
+          <li class="highlight-item">
+            <h3 class="highlight-title">Start with ISO</h3>
+            <p class="highlight-description">Set it as low as your conditions allow. Only raise it when aperture and shutter speed have been pushed to their limits.</p>
+          </li>
+          <li class="highlight-item">
+            <h3 class="highlight-title">Then set aperture</h3>
+            <p class="highlight-description">Choose the depth of field you want. This constrains how much light the lens can gather.</p>
+          </li>
+          <li class="highlight-item">
+            <h3 class="highlight-title">Finally, shutter speed</h3>
+            <p class="highlight-description">Adjust to nail the exposure. Fast enough to avoid camera shake or freeze motion; slow enough to let in sufficient light.</p>
+          </li>
+        </ul>
+        <div class="info-section-footer">
+          <div class="button-container">
+            <a href="../aperture/" class="button tertiary-button">Review Aperture</a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <div id="fullscreen-menu-placeholder"></div>
+  <div id="lightbox-placeholder"></div>
+  <div id="footer-placeholder"></div>
+  <script type="module" src="../assets/js/init.js"></script>
+  <script type="module" src="../assets/js/pages/iso.js"></script>
+</body>
+</html>

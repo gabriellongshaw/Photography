@@ -1,134 +1,110 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Photography</title>
-  <meta name="description" content="Learn photography basics — aperture, shutter speed, and more. Explore simulators, guides, and galleries." />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photography | Learn Light &amp; Exposure</title>
+  <meta name="description" content="A practical guide to understanding light, exposure, and creative control in photography. Explore aperture, shutter speed, ISO and more.">
+  <meta name="author" content="Gabriel Longshaw">
+  <meta property="og:title" content="Photography | Learn Light &amp; Exposure">
+  <meta property="og:description" content="A practical guide to understanding light, exposure, and creative control in photography.">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/fonts.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/components/header.css">
+  <link rel="stylesheet" href="assets/css/components/footer.css">
+  <link rel="stylesheet" href="assets/css/components/buttons.css">
+  <link rel="stylesheet" href="assets/css/components/menu.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
-<body class="light">
-<header class="site-header">
-  <div class="container header-inner">
-    <div class="brand">
-      <div>
-        <h1>Photography</h1>
-        <p class="tagline">Control light. Craft depth. Master focus.</p>
+<body>
+  <div id="header-placeholder"></div>
+  <main class="content">
+    <section class="hero-profile">
+      <div class="hero-profile-inner">
+        <span class="hero-eyebrow">A guide to light &amp; exposure</span>
+        <h1 class="hero-profile-name">Photography</h1>
+        <p class="hero-profile-meta">Aperture &middot; Shutter Speed &middot; ISO</p>
+        <p class="hero-profile-desc">Master the fundamentals of photography. From understanding aperture and shutter speed to controlling light and depth of field &mdash; learn the tools that shape every great image.</p>
+        <div class="hero-profile-buttons">
+          <a href="aperture/" class="button">Start Learning</a>
+          <a href="iso/" class="button secondary-button">Explore ISO</a>
+        </div>
+        <div class="divider hero-profile-divider" aria-hidden="true"></div>
+        <p class="hero-quote">"The heavens declare the glory of God; and the firmament shows His handiwork." &mdash; Psalm 19:1</p>
       </div>
+    </section>
+    <div class="section-divider"></div>
+    <section class="main-section" aria-labelledby="topics-heading">
+      <h2 class="section-title" id="topics-heading">Topics</h2>
+      <p class="page-description">Pick a topic to dive into interactive guides, simulators, and galleries.</p>
+      <div class="topic-grid">
+        <a href="aperture/" class="topic-card">
+          <span class="topic-card-label">Chapter 1</span>
+          <span class="topic-card-title">Aperture</span>
+          <span class="topic-card-desc">Understand f-stops, depth of field, and how the size of your lens opening shapes every photo.</span>
+          <span class="topic-card-cta">Explore Aperture →</span>
+        </a>
+        <a href="shutter-speed/" class="topic-card">
+          <span class="topic-card-label">Chapter 2</span>
+          <span class="topic-card-title">Shutter Speed</span>
+          <span class="topic-card-desc">Freeze fast action or create silky motion blur by controlling how long your sensor is exposed to light.</span>
+          <span class="topic-card-cta">Explore Shutter Speed →</span>
+        </a>
+        <a href="iso/" class="topic-card">
+          <span class="topic-card-label">Chapter 3</span>
+          <span class="topic-card-title">ISO</span>
+          <span class="topic-card-desc">Balance sensitivity and noise. Learn when to push ISO high and when to keep it low for clean results.</span>
+          <span class="topic-card-cta">Explore ISO →</span>
+        </a>
+      </div>
+    </section>
+    <div class="section-divider"></div>
+    <div class="info-sections-grid">
+      <section class="info-section" aria-labelledby="triangle-heading">
+        <h2 class="info-section-title" id="triangle-heading">The Exposure Triangle</h2>
+        <p class="info-section-lead">Every photograph is shaped by three settings working together: aperture, shutter speed, and ISO. Understanding how they relate is the key to full creative control.</p>
+        <p class="second">Change one and you affect the others. A wide aperture lets in more light, so you can use a faster shutter or lower ISO. A slow shutter in dim light might require you to raise ISO. Mastering the balance separates snapshots from intentional images.</p>
+        <ul class="highlight-list">
+          <li class="highlight-item">
+            <span class="highlight-dot"></span>
+            <div class="highlight-content">
+              <h3 class="highlight-title">Aperture</h3>
+              <p class="highlight-description">Controls how wide the lens opens. Affects both light and depth of field.</p>
+            </div>
+          </li>
+          <li class="highlight-item">
+            <span class="highlight-dot"></span>
+            <div class="highlight-content">
+              <h3 class="highlight-title">Shutter Speed</h3>
+              <p class="highlight-description">Controls how long the shutter stays open. Affects motion and light.</p>
+            </div>
+          </li>
+          <li class="highlight-item">
+            <span class="highlight-dot"></span>
+            <div class="highlight-content">
+              <h3 class="highlight-title">ISO</h3>
+              <p class="highlight-description">Controls sensor sensitivity. Higher values brighten the image but introduce noise.</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <div class="section-divider"></div>
+      <section class="info-section" aria-labelledby="start-heading">
+        <h2 class="info-section-title" id="start-heading">Where to Start</h2>
+        <p class="info-section-lead">If you're new to photography, start with aperture. It has the most visible effect on your images and is the foundation of understanding depth of field and exposure.</p>
+        <div class="info-section-footer">
+          <div class="button-container">
+            <a href="aperture/" class="button tertiary-button">Start with Aperture</a>
+          </div>
+        </div>
+      </section>
     </div>
-    <div class="nav-container">
-      <nav class="nav">
-        <a href="index.html" class="active">Home</a>
-        <a href="aperture/">Aperture</a>
-        <a href="shutter-speed/">Shutter Speed</a>
-      </nav>
-      <button id="menuToggle" class="menu-btn" aria-label="Open menu">☰</button>
-      <button id="themeToggleHeader" class="theme-btn" aria-label="Toggle theme">
-        <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
-             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="12" cy="12" r="5"></circle>
-          <line x1="12" y1="1" x2="12" y2="3"></line>
-          <line x1="12" y1="21" x2="12" y2="23"></line>
-          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-          <line x1="1" y1="12" x2="3" y2="12"></line>
-          <line x1="21" y1="12" x2="23" y2="12"></line>
-          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-        </svg>
-        <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
-             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z"></path>
-        </svg>
-      </button>
-    </div>
-  </div>
-</header>
-
-<div id="mobileMenu" class="mobile-menu">
-  <button id="closeMenu" class="close-btn" aria-label="Close menu">✕</button>
-  <ul>
-    <li><a href="index.html" class="active">Home</a></li>
-    <li><a href="aperture/">Aperture</a></li>
-    <li><a href="shutter-speed/">Shutter Speed</a></li>
-  </ul>
-  <button id="themeToggleMobile" class="theme-btn" aria-label="Toggle theme">
-    <svg id="themeIconMobileSun" class="theme-icon sun" viewBox="0 0 24 24">
-      <circle cx="12" cy="12" r="5" fill="var(--icon)" />
-      <g stroke="var(--icon)" stroke-width="2">
-        <line x1="12" y1="1" x2="12" y2="4" />
-        <line x1="12" y1="20" x2="12" y2="23" />
-        <line x1="1" y1="12" x2="4" y2="12" />
-        <line x1="20" y1="12" x2="23" y2="12" />
-        <line x1="4" y1="4" x2="6" y2="6" />
-        <line x1="18" y1="18" x2="20" y2="20" />
-        <line x1="18" y1="6" x2="20" y2="4" />
-        <line x1="4" y1="20" x2="6" y2="18" />
-      </g>
-    </svg>
-    <svg id="themeIconMobileMoon" class="theme-icon moon" viewBox="0 0 24 24">
-      <path fill="var(--icon)" d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z" />
-    </svg>
-  </button>
-</div>
-
-<section class="hero panel">
-  <div class="container hero-grid">
-    <div class="hero-copy">
-      <h2>Welcome to Photography Basics</h2>
-      <p class="lead">Learn how aperture, shutter speed, and light come together to shape your photos.</p>
-      <p><a href="aperture/" class="btn">Start Learning →</a></p>
-    </div>
-    <figure class="hero-image">
-      <img src="https://picsum.photos/900/700?image=1043" alt="Camera with lens">
-      <figcaption>Mastering exposure — one step at a time</figcaption>
-    </figure>
-  </div>
-</section>
-
-<section id="overview" class="panel">
-  <div class="container">
-    <h3>What you’ll learn</h3>
-    <div class="facts">
-      <article>
-        <h4>Aperture</h4>
-        <p>Control depth of field and light with f-stops.</p>
-        <a href="aperture/" class="btn">Explore Aperture →</a>
-      </article>
-      <article>
-        <h4>Shutter Speed</h4>
-        <p>Freeze motion or create blur with long exposures.</p>
-        <a href="shutter-speed/" class="btn">Explore Shutter Speed →</a>
-      </article>
-      <article>
-        <h4>ISO & Exposure</h4>
-        <p>Balance sensitivity and noise for the perfect shot.</p>
-        <a href="#" class="btn disabled">Coming soon</a>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section id="gallery-preview" class="panel">
-  <div class="container">
-    <h3>Inspiration Gallery</h3>
-    <p class="muted">See the impact of different settings in real photos.</p>
-    <div class="grid gallery-grid">
-      <figure><img src="https://picsum.photos/400/300?image=1005" alt="Portrait shallow DOF"><figcaption>Shallow DOF</figcaption></figure>
-      <figure><img src="https://picsum.photos/400/300?image=1011" alt="Landscape deep DOF"><figcaption>Deep DOF</figcaption></figure>
-      <figure><img src="https://picsum.photos/400/300?image=1027" alt="Motion blur"><figcaption>Motion blur</figcaption></figure>
-    </div>
-  </div>
-</section>
-
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <p>© <span id="year"></span> Gabriel Longshaw. All rights reserved.</p>
-  </div>
-</footer>
-
-<script src="assets/js/main.js"></script>
+  </main>
+  <div id="fullscreen-menu-placeholder"></div>
+  <div id="footer-placeholder"></div>
+  <script type="module" src="assets/js/init.js"></script>
 </body>
 </html>

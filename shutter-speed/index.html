@@ -1,187 +1,139 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Photography - Shutter Speed</title>
-  <meta name="description" content="Learn shutter speed, motion blur, and how to freeze or blur action. Interactive simulator and gallery." />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shutter Speed | Photography</title>
+  <meta name="description" content="Learn how shutter speed controls motion blur and exposure. Interactive simulator and gallery.">
+  <meta name="author" content="Gabriel Longshaw">
+  <link rel="stylesheet" href="../assets/css/variables.css">
+  <link rel="stylesheet" href="../assets/css/fonts.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/components/header.css">
+  <link rel="stylesheet" href="../assets/css/components/footer.css">
+  <link rel="stylesheet" href="../assets/css/components/buttons.css">
+  <link rel="stylesheet" href="../assets/css/components/menu.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
 </head>
-<body class="light">
-<header class="site-header">
-  <div class="container header-inner">
-    <div class="brand">
-  <div>
-    <h1>Photography — <span class="accent">Shutter Speed</span></h1>
-    <p class="tagline">Control motion. Capture time. Master Blur.</p>
-   </div>
-  </div>
-    <div class="nav-container">
-      <nav class="nav">
-        <a href="../index.html">Home</a>
-        <a href="../aperture/">Aperture</a>
-        <a href="index.html" class="active">Shutter Speed</a>
-      </nav>
-      <button id="menuToggle" class="menu-btn" aria-label="Open menu">☰</button>
-      <button id="themeToggleHeader" class="theme-btn" aria-label="Toggle theme">
-        <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="12" cy="12" r="5"></circle>
-          <line x1="12" y1="1" x2="12" y2="3"></line>
-          <line x1="12" y1="21" x2="12" y2="23"></line>
-          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-          <line x1="1" y1="12" x2="3" y2="12"></line>
-          <line x1="21" y1="12" x2="23" y2="12"></line>
-          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-        </svg>
-        <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z"></path>
-        </svg>
-      </button>
+<body>
+  <div id="header-placeholder"></div>
+  <main class="content">
+    <div class="page-hero">
+      <p class="page-hero-eyebrow">Chapter 2</p>
+      <h1 class="page-hero-title">Shutter Speed</h1>
+      <p class="page-hero-desc">Shutter speed is how long your camera's sensor is exposed to light. A fast shutter freezes motion; a slow shutter lets movement blur across the frame in long, painterly streaks.</p>
+      <a href="../iso/" class="button tertiary-button">Next: ISO →</a>
     </div>
-  </div>
-</header>
-
-<div id="mobileMenu" class="mobile-menu">
-  <button id="closeMenu" class="close-btn" aria-label="Close menu">✕</button>
-  <ul>
-    <li><a href="../../index.html">Home</a></li>
-    <li><a href="../aperture/">Aperture</a></li>
-    <li><a href="index.html" class="active">Shutter Speed</a></li>
-  </ul>
-  <button id="themeToggleMobile" class="theme-btn" aria-label="Toggle theme">
-    <svg id="themeIconMobileSun" class="theme-icon sun" viewBox="0 0 24 24">
-      <circle cx="12" cy="12" r="5" fill="var(--icon)" />
-      <g stroke="var(--icon)" stroke-width="2">
-        <line x1="12" y1="1" x2="12" y2="4" />
-        <line x1="12" y1="20" x2="12" y2="23" />
-        <line x1="1" y1="12" x2="4" y2="12" />
-        <line x1="20" y1="12" x2="23" y2="12" />
-        <line x1="4" y1="4" x2="6" y2="6" />
-        <line x1="18" y1="18" x2="20" y2="20" />
-        <line x1="18" y1="6" x2="20" y2="4" />
-        <line x1="4" y1="20" x2="6" y2="18" />
-      </g>
-    </svg>
-    <svg id="themeIconMobileMoon" class="theme-icon moon" viewBox="0 0 24 24">
-      <path fill="var(--icon)" d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z" />
-    </svg>
-  </button>
-</div>
-
-<section class="hero panel">
-  <div class="container hero-grid">
-    <div class="hero-copy">
-      <h2>Master Motion with Shutter Speed</h2>
-      <p class="lead">Freeze action or create dramatic blur by controlling how long your camera’s shutter stays open.</p>
-    </div>
-    <figure class="hero-image">
-      <img src="https://picsum.photos/900/700?image=1031" alt="Motion blur example">
-      <figcaption>Long exposure creates motion blur</figcaption>
-    </figure>
-  </div>
-</section>
-
-<section id="about" class="panel">
-  <div class="container">
-    <h3>Quick facts</h3>
-    <div class="facts">
-      <article>
-        <h4>Fast shutter</h4>
-        <p>1/1000 sec freezes fast action like sports or wildlife.</p>
-      </article>
-      <article>
-        <h4>Slow shutter</h4>
-        <p>1/10 sec or longer creates motion blur and light trails.</p>
-      </article>
-      <article>
-        <h4>Exposure</h4>
-        <p>Slower shutter = more light. Faster shutter = less light. Balance with aperture or ISO.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section id="simulator" class="panel simulator">
-  <div class="container">
-    <h3>Shutter Speed Simulator</h3>
-    <p class="muted">Drag the slider to change shutter speed. The image simulates blur and exposure.</p>
-    <div class="sim-grid">
-      <div class="sim-preview">
-        <img id="shutterSimImage" src="https://picsum.photos/900/600?image=1021" alt="Simulated motion photo">
-        <div class="sim-caption">Shutter speed: <span id="shutterValue">1/125s</span></div>
-      </div>
-      <div class="sim-controls">
-        <label for="shutterRange">Shutter speed</label>
-        <input id="shutterRange" type="range" min="0" max="100" step="1" value="50" />
-        <div class="shutter-scale">
-          <span>1s</span>
-          <span>1/15s</span>
-          <span>1/125s</span>
-          <span>1/500s</span>
-          <span>1/1000s</span>
+    <div class="section-divider"></div>
+    <section class="main-section" aria-labelledby="facts-heading">
+      <h2 class="section-title" id="facts-heading">Key Concepts</h2>
+      <div class="quick-facts">
+        <div class="fact-card">
+          <span class="fact-card-title">Fast Shutter</span>
+          <span class="fact-card-body">1/500s and above freezes fast-moving subjects — sports, wildlife, splashing water. Lets in less light, so pair with wide aperture or higher ISO.</span>
         </div>
-        <div class="sim-notes">
-          <p><strong>Tip:</strong> Use fast shutter to freeze motion, or slow shutter for artistic blur.</p>
+        <div class="fact-card">
+          <span class="fact-card-title">Slow Shutter</span>
+          <span class="fact-card-body">1/30s and below creates motion blur. Waterfalls turn silky, car headlights become light trails, and night scenes become possible.</span>
+        </div>
+        <div class="fact-card">
+          <span class="fact-card-title">Handheld Limit</span>
+          <span class="fact-card-body">A common rule: don't shoot slower than 1/(focal length). On a 50mm lens, avoid going slower than 1/50s without a tripod or image stabilisation.</span>
+        </div>
+        <div class="fact-card">
+          <span class="fact-card-title">Exposure Impact</span>
+          <span class="fact-card-body">Shutter speed directly controls how much total light hits the sensor. One full stop doubles or halves the exposure time and thus the light.</span>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-
-<section id="gallery" class="panel">
-  <div class="container">
-    <h3>Gallery — Motion examples</h3>
-    <p class="muted">Click an image to enlarge.</p>
-    <div class="grid gallery-grid" id="galleryGrid">
-      <figure><img src="https://picsum.photos/400/300?image=1024" alt="Sports freeze"><figcaption>1/1000 — freeze</figcaption></figure>
-      <figure><img src="https://picsum.photos/400/300?image=1040" alt="Waterfall blur"><figcaption>1/2 — silky water</figcaption></figure>
-      <figure><img src="https://picsum.photos/400/300?image=1058" alt="Light trails"><figcaption>10s — light trails</figcaption></figure>
-      <figure><img src="https://picsum.photos/400/300?image=1012" alt="Street motion"><figcaption>1/30 — motion blur</figcaption></figure>
-    </div>
-  </div>
-</section>
-
-<section id="learn" class="panel">
-  <div class="container">
-    <h3>Learn more</h3>
-    <div class="learn-grid">
-      <article>
-        <h4>Common shutter speeds</h4>
-        <ul>
-          <li><strong>1/1000s+</strong> — sports, wildlife</li>
-          <li><strong>1/125 - 1/250s</strong> — portraits, everyday</li>
-          <li><strong>1/30s - 1s</strong> — creative blur, night</li>
-        </ul>
-      </article>
-      <article>
-        <h4>Practice ideas</h4>
-        <ol>
-          <li>Photograph running water at 1/1000s and 1s — compare results.</li>
-          <li>Try light trails with 10–20s exposures at night.</li>
-          <li>Experiment with panning: track a moving subject at 1/30s.</li>
-        </ol>
-      </article>
-    </div>
-  </div>
-</section>
-
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <p>© <span id="year"></span> Gabriel Longshaw. All rights reserved.</p>
-  </div>
-</footer>
-
-<div id="lightbox" class="lightbox" aria-hidden="true">
-  <button id="lightboxClose" class="lb-close" aria-label="Close">✕</button>
-  <img id="lightboxImg" src="" alt="">
-  <p id="lightboxCaption"></p>
-</div>
-
-<script src="../assets/js/main.js"></script>
+    </section>
+    <div class="section-divider"></div>
+    <section class="sim-section" aria-labelledby="sim-heading">
+      <h2 class="section-title" id="sim-heading">Shutter Speed Simulator</h2>
+      <p class="page-description">Drag the slider to change shutter speed. The image simulates motion blur and exposure change.</p>
+      <div class="sim-layout">
+        <div class="sim-preview">
+          <img
+            id="shutter-sim-image"
+            class="sim-preview-img"
+            src="https://picsum.photos/900/600?image=1021"
+            alt="Simulated motion"
+          >
+          <p class="sim-caption">Shutter speed: <strong id="shutter-value">1/125s</strong></p>
+        </div>
+        <div class="sim-controls">
+          <label for="shutter-range">Shutter speed</label>
+          <p class="sim-value" id="shutter-display">1/125s</p>
+          <input id="shutter-range" type="range" min="0" max="100" step="1" value="50">
+          <div class="scale-labels">
+            <span>1s</span>
+            <span>1/30s</span>
+            <span>1/125s</span>
+            <span>1/500s</span>
+            <span>1/4000s</span>
+          </div>
+          <p class="sim-note">Slow shutter = motion blur, more light. Fast shutter = frozen motion, less light. Use a tripod for speeds slower than 1/60s.</p>
+        </div>
+      </div>
+    </section>
+    <div class="section-divider"></div>
+    <section class="main-section" aria-labelledby="gallery-heading">
+      <h2 class="section-title" id="gallery-heading">Motion Gallery</h2>
+      <p class="page-description">See the visual difference shutter speed makes. Tap to enlarge.</p>
+      <div class="gallery-grid">
+        <figure class="gallery-item">
+          <img src="https://picsum.photos/600/400?image=1024" alt="Sports action frozen at high shutter speed">
+          <figcaption>1/1000s — frozen action</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="https://picsum.photos/600/400?image=1040" alt="Waterfall with silky blur">
+          <figcaption>1/2s — silky waterfall</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="https://picsum.photos/600/400?image=1058" alt="Light trails at night long exposure">
+          <figcaption>10s — light trails</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="https://picsum.photos/600/400?image=1012" alt="Street with creative motion blur">
+          <figcaption>1/30s — creative blur</figcaption>
+        </figure>
+      </div>
+    </section>
+    <div class="section-divider"></div>
+    <section class="main-section" aria-labelledby="learn-heading">
+      <h2 class="section-title" id="learn-heading">Practice &amp; Reference</h2>
+      <div class="learn-grid">
+        <div class="learn-card">
+          <h3>Common uses by speed</h3>
+          <ul>
+            <li><strong>1/2000s+</strong> — birds in flight, motorsport</li>
+            <li><strong>1/500s – 1/1000s</strong> — sports, children running</li>
+            <li><strong>1/125s – 1/250s</strong> — everyday handheld shooting</li>
+            <li><strong>1/30s – 1s</strong> — low light, waterfalls, panning</li>
+            <li><strong>1s+</strong> — light trails, star trails, night sky</li>
+          </ul>
+        </div>
+        <div class="learn-card">
+          <h3>Practice exercises</h3>
+          <ol>
+            <li>Photograph running water at 1/1000s and 1/2s — compare the results side by side.</li>
+            <li>At night, set a 10–20s exposure and wave a torch for light painting.</li>
+            <li>Try panning: track a moving car at 1/30s for a blurred background with a sharp subject.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+    <div class="section-divider"></div>
+    <section class="main-section">
+      <div class="button-container">
+        <a href="../iso/" class="button tertiary-button">Next: ISO →</a>
+      </div>
+    </section>
+  </main>
+  <div id="fullscreen-menu-placeholder"></div>
+  <div id="lightbox-placeholder"></div>
+  <div id="footer-placeholder"></div>
+  <script type="module" src="../assets/js/init.js"></script>
+  <script type="module" src="../assets/js/pages/shutter-speed.js"></script>
 </body>
 </html>

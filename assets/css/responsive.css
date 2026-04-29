@@ -1,0 +1,56 @@
+@media (min-width: 600px) {
+  .hero-profile {
+    padding: 5rem 2rem 3.5rem;
+  }
+  .hero-profile-name {
+    font-size: 3rem;
+  }
+  .header-container {
+    padding: 0 2rem;
+  }
+  .footer-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.5rem 2rem;
+  }
+  .footer-section {
+    flex: 1 1 40%;
+    min-width: 150px;
+  }
+  .info-section {
+    padding: 2.5rem 2rem;
+  }
+  .page-hero-title {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .header-nav {
+    display: flex;
+  }
+  .sim-layout {
+    grid-template-columns: 1fr 300px;
+  }
+  .info-sections-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .info-sections-grid .section-divider {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .sim-layout {
+    grid-template-columns: 1fr 360px;
+  }
+}
+
+@media (max-width: 767px) {
+  .sim-layout {
+    grid-template-columns: 1fr;
+  }
+  .page-hero-title {
+    font-size: 2rem;
+  }
+}
