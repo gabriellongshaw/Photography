@@ -134,10 +134,9 @@ html.scroll-lock .header {
 
 .header-nav {
   display: none;
-  align-items: center;
+  align-items: flex-end;
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
 }
 
 .header-nav ul {
